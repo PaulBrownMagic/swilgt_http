@@ -53,7 +53,7 @@ This is a category you can import so when making an object with handlers you can
 *NB* Logtalk may throw up a little warning about Lambda expressions and variables, don't worry about it. It's usually good advice but this case is the exemption that proves the rule.
 
 ## `loader.lgt` And A Workaround/With For Existing SWI-Apps
-This file loads `http` and `handler`. There the recommended way to do things because if you load these before your routes you'll get to take advantage of static binding between the objects. But, if you're just wanting to add in a Logtalk route to an existing SWI-Prolog web application like so:
+This file loads `http` and `handler`. They're the recommended way to do things because if you load these before your routes you'll get to take advantage of static binding between the objects. But, if you're just wanting to add in a Logtalk route to an existing SWI-Prolog web application like so:
 
 ``` prolog
 :- http_handler(root(.), home::say_hi, []).
