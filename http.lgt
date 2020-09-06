@@ -1,43 +1,43 @@
 :- object(http).
 
     :- info([ version is 1:0:0
-	        , author is 'Paul Brown'
-			, date is 2020-09-02
-			, comment is 'An interface to the SWI-Prolog library(http/http_server)']).
+            , author is 'Paul Brown'
+            , date is 2020-09-02
+            , comment is 'An interface to the SWI-Prolog library(http/http_server)']).
 
     :- use_module(http_server, [ http_server/1
-	                           , http_reply_file/3
-							   , http_current_request/1
-							   , http_dispatch/1
-							   , http_stop_server/2
-							   , http_server_property/2
-							   , http_reload_with_parameters/3
-							   , http_current_handler/2
-							   , reply_json_dict/1 as http_reply_json_dict/1
-							   , reply_json_dict/2 as http_reply_json_dict/2
-							   , http_request_expansion/2
-							   , http_spawn/2
-							   , http_current_server/2
-							   , http_read_json_dict/2
-							   , http_read_json_dict/3
-							   , http_link_to_id/3
-							   , http_switch_protocol/2
-							   , http_404/2
-							   , http_delete_handler/1
-							   , http_add_worker/2
-							   , http_workers/2
-							   , is_json_content_type/1 as http_is_json_content_type/1
-							   , http_location_by_id/2
-							   , http_parameters/2
-							   , http_parameters/3
-							   , http_redirect/3
-							   , http_handler/3
-							   , html_meta/1
-							   , http_current_worker/2
-							   , reply_html_page/2 as http_reply_html_page/2
-							   , reply_html_page/3 as http_reply_html_page/3
-							   , http_peer/2
-							   ]).
+                               , http_reply_file/3
+                               , http_current_request/1
+                               , http_dispatch/1
+                               , http_stop_server/2
+                               , http_server_property/2
+                               , http_reload_with_parameters/3
+                               , http_current_handler/2
+                               , reply_json_dict/1 as http_reply_json_dict/1
+                               , reply_json_dict/2 as http_reply_json_dict/2
+                               , http_request_expansion/2
+                               , http_spawn/2
+                               , http_current_server/2
+                               , http_read_json_dict/2
+                               , http_read_json_dict/3
+                               , http_link_to_id/3
+                               , http_switch_protocol/2
+                               , http_404/2
+                               , http_delete_handler/1
+                               , http_add_worker/2
+                               , http_workers/2
+                               , is_json_content_type/1 as http_is_json_content_type/1
+                               , http_location_by_id/2
+                               , http_parameters/2
+                               , http_parameters/3
+                               , http_redirect/3
+                               , http_handler/3
+                               , html_meta/1
+                               , http_current_worker/2
+                               , reply_html_page/2 as http_reply_html_page/2
+                               , reply_html_page/3 as http_reply_html_page/3
+                               , http_peer/2
+                               ]).
 
 
    :- public(server/1). server(Options) :- http_server(Options).
