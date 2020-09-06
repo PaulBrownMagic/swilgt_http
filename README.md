@@ -11,7 +11,7 @@ This object is a proxy to `library(http/http_server)`. Anytime you have a predic
 ```
 Write:
 
-``` prolog
+``` logtalk
 :- http::server([port(7000)]).
 ```
 
@@ -22,7 +22,7 @@ reply_json_dict(D).
 ```
 It's:
 
-``` prolog
+``` logtalk
 http::reply_json_dict(D).
 ```
 
@@ -32,7 +32,7 @@ http::reply_json_dict(D).
 
 This is a category you can import so when making an object with handlers you can define them like so:
 
-``` prolog
+``` logtalk
 :- object(home,
     imports(handler)).
     
@@ -55,13 +55,13 @@ This is a category you can import so when making an object with handlers you can
 ## `loader.lgt` And A Workaround/With For Existing SWI-Apps
 This file loads `http` and `handler`. They're the recommended way to do things because if you load these before your routes you'll get to take advantage of static binding between the objects. But, if you're just wanting to add in a Logtalk route to an existing SWI-Prolog web application like so:
 
-``` prolog
+``` logtalk
 :- http_handler(root(.), home::say_hi, []).
 ```
 
 You'll find it'll throw an error. You could write:
 
-``` prolog
+``` logtalk
 :- http_handler(root(.), [R]>>home::say_hi(R), []).
 ```
 
