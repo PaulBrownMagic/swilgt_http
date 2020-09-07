@@ -3,7 +3,7 @@
 )).
 
     :- initialization((
-        logtalk_load([ types(list)
+        logtalk_load([ basic_types(loader)
                      ]),
         use_module(library(http/http_server), []),
         logtalk_load([ http
