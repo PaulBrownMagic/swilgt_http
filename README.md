@@ -35,18 +35,18 @@ This is a category you can import so when making an object with handlers you can
 ``` logtalk
 :- object(home,
     imports(handler)).
-    
+
     :- initialization((
         ^^handler(root(.), say_hi, [])
     )).
-    
+
     say_hi(_Request) :-
         write('Content-type: text/plain'),
         nl,
         nl,
         write('Hello, world!'),
         nl.
-    
+
 :- end_object.
 ```
 

@@ -46,8 +46,8 @@
    :- public(dispatch/1). dispatch(Request) :- http_dispatch(Request).
    :- public(stop_server/2). stop_server(Port, Options) :- http_stop_server(Port, Options).
    :- public(server_property/2). server_property(Port, Property) :- http_server_property(Port, Property).
-   :- public(read_json_dict/2). read_json_dict(Request, Dict) :- {http_read_json_dict(Request, Dict)}.
-   :- public(read_json_dict/3). read_json_dict(Request, Dict, Options) :- {http_read_json_dict(Request, Dict, Options)}.
+   :- public(read_json_dict/2). read_json_dict(Request, Dict) :- http_read_json_dict(Request, Dict).
+   :- public(read_json_dict/3). read_json_dict(Request, Dict, Options) :- http_read_json_dict(Request, Dict, Options).
    :- public(reload_with_parameters/3). reload_with_parameters(Request, Parameters, HREF) :- http_reload_with_parameters(Request, Parameters, HREF).
    :- public(reply_json_dict/1). reply_json_dict(JSONDict) :- http_reply_json_dict(JSONDict).
    :- public(reply_json_dict/2). reply_json_dict(JSONDict, Options) :- http_reply_json_dict(JSONDict, Options).
