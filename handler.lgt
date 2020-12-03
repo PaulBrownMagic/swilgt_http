@@ -5,6 +5,9 @@
             , date is 2020-09-04
             , comment is 'Pretty HTTP handler registration']).
 
+    % avoid linter warning with Request variable in the handler/3 predicate definition
+    :- set_logtalk_flag(lambda_variables, silent).
+
     :- private(handler/3).
     :- mode(handler(+term, +term, +list), one).
     :- info(handler/3,
