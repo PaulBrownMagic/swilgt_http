@@ -1,6 +1,6 @@
 # swilgt HTTP
 
-A few useful imports for web server progamming using Logtalk and SWI-Prolog's `library(http/http_server)`.
+A few useful imports for web server programming using Logtalk and SWI-Prolog's `library(http/http_server)`.
 
 ## `http.lgt`
 
@@ -49,8 +49,6 @@ This is a category you can import so when making an object with handlers you can
 
 :- end_object.
 ```
-
-*NB* Logtalk may throw up a little warning about Lambda expressions and variables, don't worry about it. It's usually good advice but this case is the exemption that proves the rule.
 
 ## `loader.lgt` And A Workaround/With For Existing SWI-Apps
 This file loads `http` and `handler`. They're the recommended way to do things because if you load these before your routes you'll get to take advantage of static binding between the objects. But, if you're just wanting to add in a Logtalk route to an existing SWI-Prolog web application like so:
